@@ -1,40 +1,39 @@
-# 🧠 StAnLo Routine
+# 🧠 StAnLo routine tracker
 
-A simple, distraction-free daily routine tracker for kids and parents with ADHD.  
-Built with **Vanilla JavaScript**, fully offline using `localStorage`.  
-Designed for calm focus. 🌙
-
----
-
-## ✨ Features
-
-- ✅ Minimalist UI with dark mode
-- 🧍 Add custom people and routines
-- 📌 Save progress locally (no login)
-- 🔄 Auto-saves state with checkboxes
-- 💻 Works on any modern browser
+a minimal routine timer for neurodivergent families (adhd-friendly, emoji-based and low distraction).  
+built with vanilla js and simple ui principles.
 
 ---
 
-## 🖥️ Tech Stack
+## ✅ features
 
-- 🌐 HTML
-- 🎨 CSS (Dark, clean layout)
-- ⚙️ Vanilla JavaScript
-- 💾 localStorage (for persistence)
-
----
-
-## 📷 Screenshots (optional)
-
-*(Add images in the `/assets` folder and link here)*
+- ⏱️ track routines step by step  
+- 🧩 emoji-based interface for visual clarity  
+- 🔕 distraction-free dark theme  
+- 📲 countdown per step & total routine  
+- 📉 visual circular progress indicator  
+- 👨‍👧 designed for kids & parents together
 
 ---
 
-## 🚀 Getting Started
+## 🚀 getting started
 
-1. **Clone the repo:**
+1. clone the repo  
+2. open `index.html` in your browser  
+3. edit your routine steps in `data/routine.json` (coming soon)
 
-```bash
-git clone https://github.com/dein-name/stanlo_routine.git
-cd stanlo_routine
+---
+
+## 🎨 ui design preview
+
+here is the current mockup of the stanlo routine tracker:
+
+[🔗 view in figma](https://www.figma.com/design/FQOkz9Az51I9tvS8McgFW4/StAnLo-Routine-Tracker?node-id=0-1&t=uLHWlVn3BEDWICJr-1)
+
+![ui design mockup](/design/stanlo_routine_tracker_mockup_v1.png)
+
+---
+
+## 🛡️ license
+
+mit licensed © stephan pagel
