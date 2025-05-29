@@ -13,6 +13,7 @@
 
 ## 🎨 UI Version 1 – Focus Mode
 
+- [ ] 📚 Applying the TEACCH concept
 - [ ] 🔘 Show current routine step:
   - [ ] 🖼️ Pictogram
   - [ ] 📝 Label (e.g., "Get dressed")
@@ -24,6 +25,7 @@
 
 ## 💡 Coming Next
 
+- [ ] 🌍 Publish app @ GitHub Pages
 - [ ] 🔄 Daily reset button
 - [ ] 📊 Progress bar per user (or percent complete)
 - [ ] 🧍‍♂️ User profiles and selection
