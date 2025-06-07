@@ -4,10 +4,13 @@ let currentStepIndex = 0;
 export async function loadRoutine() {
     try {
         const response = await fetch('./data/routine.json');
-        const data = await response.json()
-        console.log(data);
+        routine = await response.json()
     }
     catch (err) {
         console.error('❌ Error loading routine:', err);
     }
+}
+
+export function getCurrentStep() {
+    return routine[currentStepIndex];
 }
