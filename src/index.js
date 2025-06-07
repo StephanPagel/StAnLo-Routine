@@ -1,9 +1,25 @@
 import { loadRoutine, getCurrentStep } from './state.js';
 import { renderStepDisplay } from './ui.js';
+import { startStepTimer } from './timer.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
     await loadRoutine();
+    
     const currentStep = getCurrentStep();
     renderStepDisplay(currentStep);
-    console.log('☝️ is displayed: ', currentStep);
+    
+    startStepTimer(currentStep.duration, (remainingTime) => {
+        const timeElem = document.querySelector('.time');
+        if (timeElem) {
+            timeElem.textContent = `⏱️ ${formatTime(remainingTime)}`;
+        }
+    }, () => {
+        console.log('✅ next step can be loaded');
+    });
 });
+
+function formatTime(seconds) {
+    const min = String(Math.floor(seconds / 60)).padStart(2, '0');
+    const sec = String(seconds % 60).padStart(2, '0');
+    return `${min}:${sec}`;
+}
