@@ -1,3 +1,7 @@
-import { loadRoutine } from './state.js';
+import { loadRoutine, getCurrentStep } from './state.js';
 
-await loadRoutine();
+document.addEventListener('DOMContentLoaded', async () => {
+    await loadRoutine();
+    const currentStep = getCurrentStep();
+    console.log('☝️ is displayed: ', currentStep);
+})
