@@ -1,11 +1,20 @@
-import { loadRoutine, getCurrentStep } from './state.js';
+import { loadRoutine, getCurrentStep, nextStep } from './state.js';
 import { renderStepDisplay } from './ui.js';
 import { startStepTimer } from './timer.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
     await loadRoutine();
-    
-    const currentStep = getCurrentStep();
+    runCurrentStep();
+});
+
+    function runCurrentStep() {
+        const currentStep = getCurrentStep();
+        if (!currentStep) {
+            console.log('🏁 routine finished');
+            document.getElementById('app').innerHTML = `<h2>🏁 routine finished</h2>`;
+            return;
+        }
+
     renderStepDisplay(currentStep);
     
     startStepTimer(currentStep.duration, (remainingTime) => {
@@ -14,9 +23,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             timeElem.textContent = `⏱️ ${formatTime(remainingTime)}`;
         }
     }, () => {
-        console.log('✅ next step can be loaded');
+        nextStep();
+        runCurrentStep();    
     });
-});
+}    
 
 function formatTime(seconds) {
     const min = String(Math.floor(seconds / 60)).padStart(2, '0');
