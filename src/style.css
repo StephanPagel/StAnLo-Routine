@@ -6,7 +6,6 @@
 
 body {
     background-color: #121212;
-    /* background-color: grey; */
     color: #e0e0e0;
     font-family: system-ui, sans-serif;
     display: flex;
@@ -16,8 +15,17 @@ body {
 }
 
 .circle {
-    background: conic-gradient(green, yellow, red);
-    width: 50vw;
+    background: conic-gradient(#00FF00, #FFFF00, #FF0000);    width: 50vw;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-circle {
+    background-color:#121212;
+    width: 90%;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
 }
