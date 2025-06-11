@@ -21,8 +21,5 @@ export function nextStep() {
     if (currentStepIndex < routine.length - 1) {
         currentStepIndex++;
         console.log('➡️ moving to next step: ', currentStepIndex);
-    } else {
-        currentStepIndex = routine.length;
-        console.log('🏁 routine finished');
     }
 }

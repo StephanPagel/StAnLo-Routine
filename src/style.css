@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    /* background-color: grey; */
+    color: #e0e0e0;
+    font-family: system-ui, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.circle {
+    background: conic-gradient(green, yellow, red);
+    width: 50vw;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
+
+

@@ -7,11 +7,16 @@ export function renderStepDisplay(currentStep) {
     }
 
     app.innerHTML = `
-        <div class="emoji">${currentStep.icon}</div>
-        <h2>${currentStep.label}</h2>
-        <p class="time">⏱️ ${formatTime(currentStep.duration)}</p>
+        <div class="progress-wrapper">
+            <svg class="progress-ring" viewBox="0 0 120 120">
+                
+                <circle class="ring-bg" cx="60" cy="60" r="54" />
+                <circle class="ring-progress" cx="60" cy="60" r="54" />
+            </svg>
+            <div class="emoji">${currentStep.icon}</div>
+            <p class="time">⏱️ ${formatTime(currentStep.duration)}</p>
+        </div>
     `;
-    console.log('📺 current step rendered: ', currentStep);
 }
 
 function formatTime(seconds) {

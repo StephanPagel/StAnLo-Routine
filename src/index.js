@@ -4,7 +4,7 @@ import { startStepTimer } from './timer.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
     await loadRoutine();
-    runCurrentStep();
+    // runCurrentStep();
 });
 
     function runCurrentStep() {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             timeElem.textContent = `⏱️ ${formatTime(remainingTime)}`;
         }
     }, () => {
-        nextStep();
+        // nextStep();
         runCurrentStep();    
     });
 }    
